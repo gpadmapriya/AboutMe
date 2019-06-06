@@ -3,6 +3,7 @@
 //Here are the questions in this trivia quiz. Respond with y/n
 
 var userName = prompt('Hey there.. What\'s your name?');
+
 console.log('User Name: ' + userName);
 
 alert('Hey ' + userName + ', try this quiz to know a little more about me. Please respond with a Y/N or Yes/No to the following questions.');
@@ -12,41 +13,47 @@ var numberOfRightAnswers = 0;
 
 //convert response to uppercase for consistency
 //Question 1
+function question1 (){
 
-var doneCartwheel = prompt('Have I tried a cartwheel before?').toUpperCase();
+  var doneCartwheel = prompt('Have I tried a cartwheel before?').toUpperCase();
 
-console.log('Done Cartwheel?: ' + doneCartwheel);
+  console.log('Done Cartwheel?: ' + doneCartwheel);
 
-if (doneCartwheel === 'Y' || doneCartwheel === 'YES') {
-  alert('Wrong! I don\'t know how people do it.');
-} else if (doneCartwheel === 'N' || doneCartwheel === 'NO'){
-  alert('So true..I wouldn\'t imagine doing one.');
-  numberOfRightAnswers++;
-} else {
-  alert(tryingToBeCool);
+  if (doneCartwheel === 'Y' || doneCartwheel === 'YES') {
+    alert('Wrong! I don\'t know how people do it.');
+  } else if (doneCartwheel === 'N' || doneCartwheel === 'NO'){
+    alert('So true..I wouldn\'t imagine doing one.');
+    numberOfRightAnswers++;
+  } else {
+    alert(tryingToBeCool);
+  }
 }
+
+question1();
 
 //Question 2
 
-var knowToWhistle = prompt('Can I whistle?').toUpperCase();
+function question2 (){
 
-console.log('Know to Whistle?: ' + knowToWhistle);
+  var knowToWhistle = prompt('Can I whistle?').toUpperCase();
 
-if (knowToWhistle === 'Y' || knowToWhistle === 'YES') {
-  alert('Not at all! I am not that cool. ');
-} else if (knowToWhistle === 'N' || knowToWhistle === 'NO'){
-  alert('Correct! I wish I knew how to. Would come in handy at times.');
-  numberOfRightAnswers++;
-} else {
-  alert(tryingToBeCool);
+  console.log('Know to Whistle?: ' + knowToWhistle);
+
+  if (knowToWhistle === 'Y' || knowToWhistle === 'YES') {
+    alert('Not at all! I am not that cool. ');
+  } else if (knowToWhistle === 'N' || knowToWhistle === 'NO'){
+    alert('Correct! I wish I knew how to. Would come in handy at times.');
+    numberOfRightAnswers++;
+  } else {
+    alert(tryingToBeCool);
+  }
 }
 
+question2();
 //Question 3
 
 var likeMangoes = prompt('Do I like Mangoes?').toUpperCase();
-
 console.log('Like Mangoes?: ' + likeMangoes);
-
 if (likeMangoes === 'Y' || likeMangoes === 'YES') {
   alert('Yes, thay are my favorite.');
   numberOfRightAnswers++;
