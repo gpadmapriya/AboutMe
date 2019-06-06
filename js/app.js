@@ -52,31 +52,42 @@ function question2 (){
 question2();
 //Question 3
 
-var likeMangoes = prompt('Do I like Mangoes?').toUpperCase();
-console.log('Like Mangoes?: ' + likeMangoes);
-if (likeMangoes === 'Y' || likeMangoes === 'YES') {
-  alert('Yes, thay are my favorite.');
-  numberOfRightAnswers++;
-} else if (likeMangoes === 'N' || likeMangoes === 'NO'){
-  alert('Are you kidding me, I absolutely love them.');
-} else {
-  alert(tryingToBeCool);
+function question3(){
+
+  var likeMangoes = prompt('Do I like Mangoes?').toUpperCase();
+  console.log('Like Mangoes?: ' + likeMangoes);
+  if (likeMangoes === 'Y' || likeMangoes === 'YES') {
+    alert('Yes, thay are my favorite.');
+    numberOfRightAnswers++;
+  } else if (likeMangoes === 'N' || likeMangoes === 'NO'){
+    alert('Are you kidding me, I absolutely love them.');
+  } else {
+    alert(tryingToBeCool);
+  }
 }
+question3();
 
 //Question 4
 
-var afraidOfDogs = prompt('Am I afraid of dogs?').toUpperCase();
+function question4(){
 
-console.log('Afraid of Dogs?: ' + afraidOfDogs);
 
-if (afraidOfDogs === 'Y' || afraidOfDogs === 'YES') {
-  alert('You read my mind. I am especially afraid of the bigger ones.');
-  numberOfRightAnswers++;
-} else if (afraidOfDogs === 'N' || afraidOfDogs === 'NO'){
-  alert('Nah.. I am afraid of them. I can\'t have one as a pet.');
-} else {  
-  alert(tryingToBeCool);
+  var afraidOfDogs = prompt('Am I afraid of dogs?').toUpperCase();
+
+  console.log('Afraid of Dogs?: ' + afraidOfDogs);
+
+  if (afraidOfDogs === 'Y' || afraidOfDogs === 'YES') {
+    alert('You read my mind. I am especially afraid of the bigger ones.');
+    numberOfRightAnswers++;
+  } else if (afraidOfDogs === 'N' || afraidOfDogs === 'NO'){
+    alert('Nah.. I am afraid of them. I can\'t have one as a pet.');
+  } else {  
+    alert(tryingToBeCool);
+  }
 }
+
+question4();
+
 
 //Question 5
 
