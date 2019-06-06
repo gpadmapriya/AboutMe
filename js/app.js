@@ -118,23 +118,6 @@ while (numberOfGuesses < 4){
   numberOfGuesses++;
 }
 
-/*Tried the same with a do while loop - Needs a little refining - not tested yet
-
-/*do {
-  guessedRetries = prompt('Can you guess the number of my retries to get all answers on the course quiz right? Please be courteous and limit your response to a number between 0 and 9');
-  console.log(guessedRetries);
-  if (myRetries < guessedRetries){
-    alert('Number is lower than your guess');
-  } else if (myRetries > guessedRetries){
-    alert('Number is greater than your guess');
-  } else {
-    correctGuess = true;
-    break;
-  }
-  numberOfGuesses++;
-} while (numberOfGuesses < 4);
-*/
-
 //Keep track of number ofright answers. Set the alert message depending on the outcomme
 
 if (!correctGuess){
@@ -149,9 +132,9 @@ var numberOfTries = 0;
 //var guessedState = ' ';
 var correctAnswer = false;
 
-var guessedState = prompt('I went on an awesome roadtrip last summer. Can you guess any of the states that I visited. Hint: Westerm states').toLowerCase();
+var guessedState = prompt('I went on an awesome roadtrip last summer. Can you guess any of the states that I visited.').toLowerCase();
 
-while (numberOfTries < 6){
+while (numberOfTries < 5){
   numberOfTries++;
   console.log('State Guessed: ' + guessedState);
   if (guessedState === 'oregon' || guessedState === 'or' ||
@@ -166,31 +149,8 @@ while (numberOfTries < 6){
     guessedState = prompt('Mmm... that doesn\'t look right. Can you try again?');
 
   }
-
-  /*Tried the above with a switch. Case doesn't seem to take an or condition. Should have sepaarate case conditions for state abbreviations
-
-  switch (answer){
-  case 'oregon':
-    correctAnswer = true;
-    break;
-  case 'california':
-    correctAnswer = true;
-    break;
-  case 'nevada':
-    correctAnswer = true;
-    break; 
-  case 'arizona':
-    correctAnswer = true;
-    break;
-  case 'idaho':
-    correctAnswer = true;
-    break;
-  default:
-  }
-  */
-
 }
-//console.log(correctAnswer);
+
 var reply;
 if (correctAnswer){
   reply = 'Awesome, you got it!. You would have scored with any one of these: ';
