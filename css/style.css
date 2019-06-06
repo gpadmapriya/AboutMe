@@ -1,10 +1,13 @@
 h2 {
-  border: yellowgreen 7px solid;
-  border-radius: 20px;
-  color: magenta;
+  /*border: yellowgreen 7px solid;
+  border-radius: 20px;*/
+  color: rgb(0,0,0);
   width: 200 px;
   position: absolute;
   
+}
+body {
+  background-color: rgb(31,213,219);
 }
 #five-questions {
   color: red;
