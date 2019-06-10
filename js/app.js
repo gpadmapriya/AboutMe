@@ -11,9 +11,17 @@ alert('Hey ' + userName + ', try this quiz to know a little more about me. Pleas
 var tryingToBeCool = 'You are trying to be smart, can you answer with a yes or a no?';
 var numberOfRightAnswers = 0;
 
+question1();
+question2();
+question3();
+question4();
+question5();
+question6();
+question7();
+
 //convert response to uppercase for consistency
 //Question 1
-function question1 (){
+function question1(){
 
   var doneCartwheel = prompt('Have I tried a cartwheel before?').toUpperCase();
 
@@ -27,9 +35,10 @@ function question1 (){
   } else {
     alert(tryingToBeCool);
   }
-}
 
-question1();
+  var el = document.getElementById('cartwheel-user-response');
+  el.textContent = doneCartwheel;
+}
 
 //Question 2
 
@@ -47,15 +56,18 @@ function question2 (){
   } else {
     alert(tryingToBeCool);
   }
+
+  var el = document.getElementById('whistle-user-response');
+  el.textContent = knowToWhistle;
 }
 
-question2();
 //Question 3
 
 function question3(){
 
   var likeMangoes = prompt('Do I like Mangoes?').toUpperCase();
   console.log('Like Mangoes?: ' + likeMangoes);
+
   if (likeMangoes === 'Y' || likeMangoes === 'YES') {
     alert('Yes, thay are my favorite.');
     numberOfRightAnswers++;
@@ -64,13 +76,14 @@ function question3(){
   } else {
     alert(tryingToBeCool);
   }
+
+  var el = document.getElementById('mangoes-user-response');
+  el.textContent = likeMangoes;
 }
-question3();
 
 //Question 4
 
 function question4(){
-
 
   var afraidOfDogs = prompt('Am I afraid of dogs?').toUpperCase();
 
@@ -81,13 +94,13 @@ function question4(){
     numberOfRightAnswers++;
   } else if (afraidOfDogs === 'N' || afraidOfDogs === 'NO'){
     alert('Nah.. I am afraid of them. I can\'t have one as a pet.');
-  } else {  
+  } else {
     alert(tryingToBeCool);
   }
+
+  var el = document.getElementById('dogs-user-response');
+  el.textContent = afraidOfDogs;
 }
-
-question4();
-
 
 //Question 5
 function question5(){
@@ -105,9 +118,10 @@ function question5(){
   } else {
     alert(tryingToBeCool);
   }
-}
-question5();
 
+  var el = document.getElementById('commute-user-response');
+  el.textContent = commuteByBus;
+}
 
 //Question 6
 //Generate a random number between 1 and 10. Take this to be the number of my retries on the quiz I took
@@ -118,9 +132,11 @@ question5();
 
 function question6 (){
 
-
-  var actualRetries = Math.floor(Math.random() * 10);
+  var actualRetries = Math.floor(Math.random() * 10) + 1;
   console.log('Actual number of retries: ' + actualRetries);
+
+  var el = document.getElementById('random-number');
+  el.textContent = actualRetries;
 
   var guessedRetries = 0;
   var correctGuess = false;
@@ -129,7 +145,6 @@ function question6 (){
   //The initial prompt is kept separate from the follow up question to be more interactive
 
   guessedRetries = prompt('Can you guess the number of my retries to get all answers on the course quiz right? Please be courteous and limit your response to a number between 1 and 10.');
-
 
   while (numberOfGuesses < 4){
     console.log('Number of retries guessed: ' + guessedRetries);
@@ -154,15 +169,11 @@ function question6 (){
   }
 
 }
-question6();
-
 
 function question7 (){
 
-
   var visitedStates = ['Oregon', 'California', 'Nevada', 'Arizona', 'Idaho'];
   var numberOfTries = 0;
-  //var guessedState = ' ';
   var correctAnswer = false;
 
   var guessedState = prompt('I went on an awesome roadtrip last summer. Can you guess any of the states that I visited.').toLowerCase();
@@ -200,14 +211,18 @@ function question7 (){
 
 }
 
-question7();
+var el = document.getElementById('message');
 
 if (numberOfRightAnswers < 5){
   alert('Nice try ' + userName + '. You got ' + numberOfRightAnswers + ' out of the 7 questions right.');
+  el.textContent = 'Nice try. You got ' + numberOfRightAnswers + ' out of 7 questions right';
 } else {
   alert('Good job ' + userName + '. You seem to know a lot about me. You got ' + numberOfRightAnswers + ' out of the 7 questions right.');
+  el.textContent = 'Good job. You seem to know a lot about me. You got ' + numberOfRightAnswers + ' out of the 7 questions right.';
 }
-//alert('Number of right answers: ' + numberOfRightAnswers);
+
+var element = document.getElementById('number-correct');
+element.textContent = numberOfRightAnswers;
 
 
 

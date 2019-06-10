@@ -9,19 +9,63 @@
       
   </head>
   <body>
-      <header class="header">
-          Trivia Quiz!
-      </header>
       <main>
-        <h2>Please respond to the following questions with y/n or yes/no answers</h2>
+        <h1>About Me</h1>
+        <p id="first-paragraph">  Hello All, My name is Padma. I have been living here in the greater Seattle area for the past 13 years. I moved here from the bay area and wouldn't be anywhere else. In a previous life, about a decade or so ago, I was a software developer and have worked on diverse teams and technologies. Trying to get back to those glory days! </p> 
         
+        <h3>Respond to the following questions with y/n or yes/no answers to get to know a little more about me.</h3>
         <ol id="five-questions">
           <li>Have I tried a cartwheel?</li>
+          <ul>
+            <li>
+              Correct Answer: N/No
+            </li>
+            <li>
+              User Response: <em id="cartwheel-user-response"></em>
+            </li>
+          </ul>
           <li>Can I Whistle?</li>
+            <ul>
+              <li>
+                Correct Answer: N/No
+              </li>
+              <li>
+                User Response: <em id="whistle-user-response"></em>
+              </li>
+            </ul>
           <li>Do I like Mangoes?</li>
+            <ul>
+              <li>
+                Correct Answer: Y/Yes
+              </li>
+              <li>
+                User Response: <em id="mangoes-user-response"></em>
+              </li>
+            </ul>
           <li>Am I afraid of dogs?</li>
+            <ul>
+              <li>
+                Correct Answer: Y/Yes
+              </li>
+              <li>
+                User Response: <em id="dogs-user-response"></em>
+              </li>
+            </ul>
           <li>Do I take the bus to work?</li>
+            <ul>
+              <li>
+                Correct Answer: Y/Yes
+              </li>
+              <li>
+                User Response: <em id="commute-user-response"></em>
+              </li>
+            </ul>
           <li>Number of my quiz retries</li>
+            <ul>
+              <li>
+                Correct Answer: <em id="random-number"></em>
+              </li>
+            </ul>
           <li>States I visited last summer</li>
             <ul>
               <li>Oregon</li>
@@ -31,6 +75,8 @@
               <li>Idaho</li>
             </ul>
         </ol>
+        <h3> Total number of correct responses: <b id="number-correct"></b></h3>
+        <h3 id="message"></h3>
       </main>
       
       <footer class="footer">
